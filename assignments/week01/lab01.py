@@ -1,0 +1,13 @@
+print("=== Personal Profile Creator ===")
+name = input("What is your name?:")
+age = input("How old are you?:")
+mail = input("What is your email address?:")
+num = input("What is your phone number?:")
+hobby = input("What is rrrryour favorite hobby?:")
+
+print("===Your profile===")
+print("Name: ",name)
+print("Age: ",age)
+print("Email: ",mail)
+print("Phone number: ",num)
+print("Favorite Hobby: ",hobby)
