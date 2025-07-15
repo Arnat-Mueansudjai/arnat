@@ -22,10 +22,10 @@ w=float(input("Enter your weight(Kg.) : "))
 h=float(input("Enter your height(M.) : "))
 BMI= w/(h**2)
 if BMI>30 :
-    print(f"Your Bmi is : {BMI:.1f} you type is Obese")
+    print(f"Your Bmi is : {BMI:.1f}\nyou type is Obese")
 elif BMI>=25 :
-    print(f"Your Bmi is : {BMI:.1f} you type is Over weight")
+    print(f"Your Bmi is : {BMI:.1f}\nyou type is Over weight")
 elif BMI>=18.5 :
-    print(f"Your Bmi is : {BMI:.1f} you type is Normal weight")
+    print(f"Your Bmi is : {BMI:.1f}\nyou type is Normal weight")
 else :
-    print(f"Your Bmi is : {BMI:.1f} you type is Under weight")
+    print(f"Your Bmi is : {BMI:.1f}\nyou type is Under weight")
