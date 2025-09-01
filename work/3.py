@@ -3,8 +3,9 @@ def fibonacci(n):
     b=1  
     for i in range(n):
         print(a) 
-        a=b
-        b=b+a
+        temp = a
+        a = b
+        b = temp + b
 
 
 n = int(input("Fibonacci sequence: "))
