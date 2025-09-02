@@ -8,7 +8,7 @@ student = {
 
 # Accessing values by key
 print(f"Name: {student['name']}")           # Alice Smith
-print(f"Age: {student['age']}")             # 20
+print(f"Age: {student['age']}")            # 20
 
 # Using get() method (safer)
 print(f"Major: {student.get('major')}")     # Computer Science
