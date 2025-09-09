@@ -52,20 +52,25 @@ lowest: คะแนนต่ำสุด
 passed: จำนวนคะแนนที่ >= 70 """
 
 def analyze_scores(scores):
-    avg=sum(scores)/len(scores)
+ 
+    total=sum(scores)
+    count = len(scores)
+    average= total/count
+    highest=max(scores)
+    lowest=min(scores)
     passed = 0
-    for i in scores:
+    for scores in scores:
         if scores[i] >=70 :
-            passed =+1;
+            passed =+1
     
-    su  = { 
-    "total":{sum(scores)},
+    
+    return  { 
+    "total":total,
     "average":avg,
     "highest":{max(scores)},
     "lowest":{min(scores)},
     "passed":passed
     } 
-    return su
     # Your Problem 4 solution
     pass
 
@@ -89,11 +94,12 @@ def count_vowels_consonants(text):
     text.replace("7","")
     text.replace("8","")
     text.replace("9","")
-    vowels = text.count('a') + text.count('e') + text.count('o') + text.count('i') + text.count('u') 
+
+    vowels = text.count('a') + text.count('e') + text.count('i') + text.count('o') + text.count('u') 
     consonnants = len(text) - vowels
     return {
         "vowels" : vowels,
-        "conson" : consonnants
+        "consonnants" : consonnants
     }
     # Your Problem 5 solution
     pass
