@@ -34,15 +34,14 @@ class Student:
             report += f"{grade["subject"]}: {grade["grade"]}\n"
         return report
 
-
-    student = Student("John", 20, "S123")
-    student.add_grade(
+student = Student("John", 20, "S123")
+student.add_grade(
     {
         "subject": "Math", 
         "grade": 85
     })
     
-    student.add_grade(
+student.add_grade(
     {
         "subject": "Science",
         "grade": 92
