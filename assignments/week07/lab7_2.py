@@ -23,6 +23,7 @@ class Student:
 
     # Method to get the average grade
     def get_average_grade(self):
+        total = 0
         for grade in self.grades:
             total+= grade["grade"]    
         return total / len(self.grades)
@@ -35,16 +36,8 @@ class Student:
         return report
 
 student = Student("John", 20, "S123")
-student.add_grade(
-    {
-        "subject": "Math", 
-        "grade": 85
-    })
-    
-student.add_grade(
-    {
-        "subject": "Science",
-        "grade": 92
-    })
+student.add_grade({"subject": "Math", "grade": 85})
+student.add_grade({"subject": "Science","grade": 92})
+
 print(student.get_average_grade())  # Should print 88.5
 print(student.get_grade_report())   # Should show all grades

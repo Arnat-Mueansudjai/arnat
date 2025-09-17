@@ -52,25 +52,20 @@ lowest: คะแนนต่ำสุด
 passed: จำนวนคะแนนที่ >= 70 """
 
 def analyze_scores(scores):
- 
-    total=sum(scores)
-    count = len(scores)
-    average= total/count
-    highest=max(scores)
-    lowest=min(scores)
-    passed = 0
-    for scores in scores:
-        if scores[i] >=70 :
-            passed =+1
+    total = sum(scores)
+    average = round(total / len(scores), 1)
+    highest = max(scores)
+    lowest = min(scores)
+    passed = sum(1 for s in scores if s >= 70)
     
-    
-    return  { 
-    "total":total,
-    "average":avg,
-    "highest":{max(scores)},
-    "lowest":{min(scores)},
-    "passed":passed
-    } 
+    return {
+        "total": total,
+        "average": average,
+        "highest": highest,
+        "lowest": lowest,
+        "passed": passed
+    }
+
     # Your Problem 4 solution
     pass
 
