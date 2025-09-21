@@ -6,7 +6,7 @@ class Mammal(Animal):
     def __init__(self, name):
         super().__init__(name)
         #Super= Animal 
-        #__init__ = method of Animal
+      
 
 class Bear(Mammal):
 
