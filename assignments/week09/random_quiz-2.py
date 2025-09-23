@@ -41,7 +41,7 @@ Example
 """
 
 import random
-
+attemt = 1
 def get_parity_hint(number):
     if number % 2 == 0:
         return "HINT: The number is even" 
@@ -58,8 +58,40 @@ def get_divisibility_hint(number):
 
 def get_range_hint(number, current_min=1, current_max=100):
     # Return narrowed range around the number
-    pass
+    low =number-12
+    hight=number+12
+    return f"HINT:The narrowed range is {low} - {hight}"
 
 def get_thefirst_digit_hint(number):
     # Retun the first digit of the number
-    pass
+    first_digit=number//10
+    return f"HINT:The first digit is {first_digit}"
+
+while True:
+    random_number = random.randint(1, 100)
+    num = int(input(f"Attempt {attemt} Enter your number:"))
+
+    if random_number == num:
+        print("Wow Wow Wow you are winner")
+        break
+
+    else :
+        print("HaHaHa GG EZ WIN!")    
+        if random_number > num:
+            print("Too low")
+
+        elif random_number < num:
+            print("Too much")
+    if attemt ==3:
+        print(get_parity_hint(random_number))
+    
+    elif attemt == 5:
+        print(get_divisibility_hint(random_number))
+    
+    elif attemt == 7:
+        print(get_range_hint(random_number))
+    
+    elif attemt == 10:
+        print(get_thefirst_digit_hint(random_number))
+    
+    attemt+=1
