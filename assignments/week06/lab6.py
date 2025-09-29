@@ -77,27 +77,22 @@ return dictionary ที่มี vowels และ consonants counts
 ไม่สนใจตัวใหญ่ตัวเล็ก (case insensitive) """
 
 def count_vowels_consonants(text):
-    text.lower(text)
-    text.replace(" ","")
-    text.replace("0","")
-    text.replace("1","")
-    text.replace("2","")
-    text.replace("3","")
-    text.replace("4","")
-    text.replace("5","")
-    text.replace("6","")
-    text.replace("7","")
-    text.replace("8","")
-    text.replace("9","")
+    text = text.lower()
 
-    vowels = text.count('a') + text.count('e') + text.count('i') + text.count('o') + text.count('u') 
-    consonnants = len(text) - vowels
+    
+    for ch in " 0123456789":
+        text = text.replace(ch, "")
+
+    
+    vowels = text.count("a") + text.count("e") + text.count("i") + text.count("o") + text.count("u")
+
+  
+    consonants = len(text) - vowels
+
     return {
-        "vowels" : vowels,
-        "consonnants" : consonnants
+        "vowels": vowels,
+        "consonants": consonants
     }
-    # Your Problem 5 solution
-    pass
 
 # =============================================================================
 # TEST SECTION - DO NOT MODIFY
