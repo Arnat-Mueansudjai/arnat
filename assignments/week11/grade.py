@@ -23,29 +23,29 @@ A global variable passing_grade = 50
 passing_geade =50
 
 def input_students(num_students):
-    students=[]
-    for i in (num_students):
-          name = input(f"Enter name {i+1}:")
-    scores=[]
-    for i in (num_students):
-          score=int(input(f"Enter score of {students:name[0]}"))
-    students.append({'name':name},{'score':scores})
+    for i in range(num_students):
+        name = input(f"Enter name of student {i + 1}: ")
+        scores = []
+        for j in range(3):
+            score = int(input(f"Enter score {j + 1} for {name}: "))
+            scores.append(score)
+        students.append({'name': name, 'scores': scores})
     return students
 
 def calculate_averages(students):
     for student in students:
-    total = 0
-    for score in student['score']:
-        total +=score
-    student.append({'average':total/3})
-    return students
+        total = 0
+        for score in student['scores']:
+            total += score
+        average = total / len(student['scores'])
+        student['average'] = average
 
 def display_results(students):
     print("Student Details:")
     for studenr in students:
         print(f"Name:{student['name']}")
-        print(f"Average Score:{student['average']}"
-        if  student['average'] => passing_geade:
+        print(f"Average Score: {student['average']}")
+        if  student['average'] >= passing_geade:
             print("Status:Pass")
         else:
             print("Status:Fail")
