@@ -1,0 +1,39 @@
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+class Solution:
+    def reverseList(self, head):
+        prev = None
+        curr = head
+
+        while curr:#321
+            next_node = curr.next #nn=1   2         3            1
+            curr.next = prev#ถัดไป=ตัวก่อน    231      213         123
+            prev = curr#ตัวก่อน=ปัจจุบัน       231        213        123
+            curr = next_node#ปัจจุบัน = *ถัดไป    3       1         none
+
+        return prev
+
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+
+print("Original List:")
+curr = head
+while curr:
+    print(curr.val, end=" -> ")
+    curr = curr.next
+print("None")
+
+sol = Solution()
+head = sol.reverseList(head)
+
+print("Reversed List:")
+curr = head
+while curr:
+    print(curr.val, end=" -> ")
+    curr = curr.next
+print("None")

@@ -1,41 +1,30 @@
 {
-    "github.copilot.enable": {
-        "*": false
-    },
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
-    "editor.acceptSuggestionOnCommitCharacter": false,
-<<<<<<< HEAD
-    "editor.acceptSuggestionOnEnter": "off",
-    "github.copilot.editor.enableAutoCompletions": false
-=======
-    "editor.acceptSuggestionOnEnter": "on",
-    "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false
-    },
-    // Prevents inline suggestions from appearing.
+    // ปิด ghost text (inline code prediction)
     "editor.inlineSuggest.enabled": false,
-    // Disables the parameter hints that pop up when you type a function signature.
-    "editor.parameterHints.enabled": false,
-    // Turns off suggestions based on the words in your current document.
-    "editor.wordBasedSuggestions": "off",
-    // Prevents triggering suggestions automatically on characters like a dot (.).
-    "editor.suggestOnTriggerCharacters": false,
-    // Stops the suggestion window from appearing.
-    "editor.suggest.showWords": false,
-    // Prevents IntelliSense hovers from showing function/type definitions.
-    "editor.hover.enabled": false,
-    // Disables GitHub Copilot suggestions.
-    "github.copilot.suggestions.enabled": false,
-    // Optional: Also disable Copilot for specific languages.
-    "github.copilot.advanced": {
-        "inlineSuggest.enableFor": {}
-    }
->>>>>>> upstream/main
+
+    // เปิดการแนะนำโค้ด (IntelliSense)
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+
+    // ให้แสดง auto-complete เมื่อพิมพ์ตัวอักษรที่เรียกใช้ได้
+    "editor.suggestOnTriggerCharacters": true,
+
+    // แนะนำ code snippets
+    "editor.snippetSuggestions": "inline",
+
+    // ตั้งค่าอื่นๆ ที่ช่วยให้เขียนได้ง่ายขึ้น
+    "editor.tabCompletion": "on",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": false,
+    "editor.autoClosingBrackets": "languageDefined",
+    "editor.autoClosingQuotes": "languageDefined",
+
+    // ให้ VS Code คาดเดาคำที่เราเคยใช้ แต่ไม่แสดงเป็น ghost text
+    "editor.wordBasedSuggestions": "currentDocument",
+
+    // ป้องกันไม่ให้ Copilot / AI แทรก ghost text (ถ้าคุณใช้)
+    "github.copilot.inlineSuggest.enable": false
 }
