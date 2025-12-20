@@ -14,8 +14,8 @@ class Solution:
             curr.next = prev#ถัดไป=ตัวก่อน    231      213         123
             prev = curr#ตัวก่อน=ปัจจุบัน       231        213        123
             curr = next_node#ปัจจุบัน = *ถัดไป    3       1         none
-
         return prev
+      
 
 head = ListNode(1)
 head.next = ListNode(2)
