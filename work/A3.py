@@ -3,7 +3,7 @@ max=1
 text=input("Enter text:")
 c.append(text)
 d=set()
-x=""
+x=-1
 for i in c:
     if i in d:
         print(f"df:{i}")
